@@ -4,6 +4,11 @@
     color: var(--textcolor);
     font-size: 26px;
     font-weight: 700;
+
+    &:hover,
+    &:focus {
+        color: var(--textcolor);
+    }
 }
 
 .page-logo-header {
@@ -11,7 +16,3 @@
 }
 
 
-.web-studio-logo:hover, 
-.web-studio-logo:focus {
-    color: var(--textcolor);
-}

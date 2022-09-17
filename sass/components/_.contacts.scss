@@ -1,7 +1,14 @@
 .contacts {
     display: flex;
     font-weight: 500;
+    
+    &:hover, &:hover .contacts-icon, &:hover a,
+    &:focus {
+        color: var(--maincolor);
+        fill: var(--maincolor);
+    }
 }
+
 
 .data {
     color:var(--secondarycolor)
@@ -18,14 +25,6 @@
     margin-right: 5px;
 
 }
-
-.contacts:hover, .contacts:hover .contacts-icon, .contacts:hover a,
-.contacts:focus {
-    color: var(--maincolor);
-    fill: var(--maincolor);
-}
-
-
 
 .contacts-icon {
     width: 16px;

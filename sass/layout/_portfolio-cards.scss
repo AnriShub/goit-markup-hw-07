@@ -2,11 +2,11 @@
     display: flex;
     flex-wrap: wrap; 
     /* gap: 30px;  */
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
 }
 
-.card:nth-child(3n) {
-    margin-right: 0;
-}
 
 
 .flex-container {
@@ -22,12 +22,20 @@
     overflow: hidden;
     font-size: 0;
     background: var(--bgcolor);
-}
 
-.flex-elements:hover, .flex-elements:hover .border-shadow, 
-.flex-elements:focus {
-    color: var(--textcolor);
-    box-shadow: var(--box-shadow-card);
+    &:hover, &:hover .border-shadow, 
+    &:focus {
+        color: var(--textcolor);
+        box-shadow: var(--box-shadow-card);
+    }
+
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+    }
 }
 
 .flex-elements:hover .overlay, .flex-elements-img-wrapper:hover .overlay, .flex-elements-img-wrapper:hover .overlay,
@@ -35,17 +43,6 @@
     transform: translateY(0%);
     overflow: visible;
 }
-
-
-
-.flex-elements:not(:nth-child(3n)) {
-    margin-right: 30px;
-}
-
-.flex-elements:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
-}
-
 
 
 .flex-elements-padding {
@@ -68,7 +65,6 @@
     color: var(--secondarycolor);
 }
 
-
 .overlay {
     position: absolute;
     padding: 63px 24px;
@@ -76,9 +72,7 @@
     height: 100%;
     left: 0px;
     bottom: 0;
-    /* top: 0px; */
     font-size: 18px;
-    /* line-height: 1.2; */
     line-height: 28px;
     letter-spacing: 0.03em;
     color:var(--bgcolor);

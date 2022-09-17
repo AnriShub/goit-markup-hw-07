@@ -19,11 +19,11 @@
     background:var(--bgcolor);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
 
-.teams-item:not(:last-child) {
+&:not(:last-child) {
     margin-right: 30px;
     }
+}
 
 
 .fon-our-teams {
@@ -36,7 +36,6 @@
     justify-content: center;
     margin-bottom: 30px;
     gap: 10px;
-    /* padding-left: 32px; */
 }
 
 .teams-item-social-round {
@@ -47,28 +46,25 @@
     width: 44px;
     height: 44px;
     background-color:var(--bgcolor);
+
+    &:hover, 
+    &:hover .teams-social-icon {
+        transition-duration: 250ms;
+        background-color:var(--maincolor);
+        fill: var(--bgcolor);
+    }
+
+    &:last-child{
+        margin-right:0
+    }
 }
-/* .teams-item-social-round path {
-    fill: var(--social-icon-color);
-} */
+
 
 .td-effects:hover .teams-item-social-round, .td-effects:hover .teams-social-icon {
     transition-duration: 250ms;
 }
 
- .teams-item-social-round:hover, 
- .teams-item-social-round:hover .teams-social-icon {
-    transition-duration: 250ms;
 
-    background-color:var(--maincolor);
-    fill: var(--bgcolor);
-}
-
-
-
-.teams-item-social-round:last-child{
-    margin-right:0
-}
 
 .teams-social-icon {
     width: 20px;
@@ -112,18 +108,14 @@
     border-style:none;
     border-color: buttonborder;
     cursor: pointer;
+
+    &:focus, &:hover {
+        background-color: var(--maincolor);
+        color: var(--bgcolor);
+    }
 }
 
 
-.btn-portfolio:focus {
-    background-color: var(--maincolor);
-    color: var(--bgcolor);
-}
-
-.btn-portfolio:hover {
-    background-color: var(--maincolor);
-    color: var(--bgcolor);
-}
 
 .btn-studio {
     margin-top: 30px;
@@ -141,17 +133,13 @@
     border-color: buttonborder;
     border-width: 0px;
     border-style: none;
+
+    &:focus, &:hover  {
+        background-color: var(--secondarycolor);
+        color: var(--bgcolor);
+    }
 }
 
-.btn-studio:focus {
-    background-color: var(--secondarycolor);
-    color: var(--bgcolor);
-}
-
-.btn-studio:hover {
-    background-color: var(--secondarycolor);
-    color: var(--bgcolor);
-}
 
 .studio-title {
     margin-right: auto;

@@ -18,27 +18,23 @@
     height: 92px;
     border: 1px solid var(--social-icon-color);
     border-radius: 4px;
-}
 
-
-.regular-customers:hover {
-    fill: var(--maincolor); 
-    border: 1px solid var(--maincolor);
-
+    &:hover {
+        fill: var(--maincolor); 
+        border: 1px solid var(--maincolor);
+    }
 }
 
 .regular-customers-icon {
     fill: var(--social-icon-color);
     max-height: 47px;
     max-width: 94px;
+
+    .regular-customers:hover & {
+        fill: var(--maincolor); 
+    }
 }
 
-
-
-.regular-customers:hover .regular-customers-icon {
-    fill: var(--maincolor); 
-
-}
 
 .td-effects:hover .regular-customers, .td-effects:hover .regular-customers-icon {
     transition-duration: 250ms;
