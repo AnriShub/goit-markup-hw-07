@@ -1,0 +1,34 @@
+.contacts {
+    display: flex;
+    font-weight: 500;
+}
+
+.data {
+    color:var(--secondarycolor)
+}
+
+
+.icon-env {
+    display: block;
+    margin-right: 10px;
+}
+
+.icon-tel {
+    display: block;
+    margin-right: 5px;
+
+}
+
+.contacts:hover, .contacts:hover .contacts-icon, .contacts:hover a,
+.contacts:focus {
+    color: var(--maincolor);
+    fill: var(--maincolor);
+}
+
+
+
+.contacts-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--secondarycolor);
+}
